@@ -1,0 +1,15 @@
+<header class="site-header">
+  <div class="page-width header__inner">
+    <button class="menu-button" type="button" data-menu-toggle aria-controls="SiteNav" aria-expanded="false"><span class="visually-hidden">{{ 'general.menu' | t }}</span>☰</button>
+    <a class="logo" href="{{ routes.root_url }}">
+      {% if settings.logo %}{{ settings.logo | image_url: width: settings.logo_width | image_tag: widths: '80, 120, 160, 200, 240', width: settings.logo_width, alt: shop.name }}{% else %}{{ shop.name }}{% endif %}
+    </a>
+    <nav id="SiteNav" class="nav" aria-label="Primary" hidden>
+      {% for link in section.settings.menu.links %}<a href="{{ link.url }}">{{ link.title }}</a>{% endfor %}
+    </nav>
+    <div class="header__actions"><a class="search-link" href="{{ routes.search_url }}">{{ 'general.search' | t }}</a><a href="{{ routes.cart_url }}">Cart ({{ cart.item_count }})</a></div>
+  </div>
+</header>
+{% schema %}
+{"name":"Header","settings":[{"type":"link_list","id":"menu","label":"Menu","default":"main-menu"}],"enabled_on":{"groups":["header"]}}
+{% endschema %}

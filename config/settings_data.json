@@ -1,0 +1,13 @@
+{
+  "current": {
+    "color_background": "#F5F1E8",
+    "color_text": "#17231C",
+    "color_accent": "#E7683F",
+    "color_surface": "#FFFFFF",
+    "radius": 16,
+    "page_width": 1300,
+    "show_vendor": false,
+    "enable_quick_add": true
+  },
+  "presets": { "Default": {} }
+}

@@ -1,0 +1,15 @@
+<section class="section"><div class="page-width product">
+  <div class="product__gallery">{% for media in product.media %}{% if media.media_type == 'image' %}{{ media | image_url: width: 1400 | image_tag: loading: 'lazy', widths: '500, 750, 1000, 1400', alt: media.alt | default: product.title }}{% else %}{{ media | media_tag }}{% endif %}{% endfor %}</div>
+  <div class="product__info"><p class="eyebrow">{{ product.vendor }}</p><h1>{{ product.title }}</h1><div class="price">{{ product.selected_or_first_available_variant.price | money }}{% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}<span class="compare-price">{{ product.selected_or_first_available_variant.compare_at_price | money }}</span>{% endif %}</div><div class="rte">{{ product.description }}</div>
+    {% form 'product', product, class: 'product-form' %}
+      {% unless product.has_only_default_variant %}<label for="Variant-{{ section.id }}">{{ 'products.product.choose_options' | t }}</label><select class="field" id="Variant-{{ section.id }}" name="id" data-variant-select>{% for variant in product.variants %}<option value="{{ variant.id }}" data-available="{{ variant.available }}"{% if variant == product.selected_or_first_available_variant %} selected{% endif %}>{{ variant.title }} — {{ variant.price | money }}</option>{% endfor %}</select>{% else %}<input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">{% endunless %}
+      <label for="Quantity-{{ section.id }}">{{ 'products.product.quantity' | t }}</label><input class="field" id="Quantity-{{ section.id }}" name="quantity" type="number" min="1" value="1">
+      <button class="button" type="submit"{% unless product.selected_or_first_available_variant.available %} disabled{% endunless %}>{% if product.selected_or_first_available_variant.available %}{{ 'products.product.add_to_cart' | t }}{% else %}{{ 'products.product.sold_out' | t }}{% endif %}</button>
+      {{ form | payment_button }}
+    {% endform %}
+    {% if section.settings.show_share %}<a href="mailto:?subject={{ product.title | url_encode }}&body={{ canonical_url | url_encode }}">Share by email</a>{% endif %}
+  </div>
+</div></section>
+{% schema %}
+{"name":"Main product","settings":[{"type":"checkbox","id":"show_share","label":"Show share link","default":true}],"blocks":[{"type":"@app"}]}
+{% endschema %}

@@ -1,0 +1,12 @@
+<footer class="footer">
+  <div class="page-width footer__grid">
+    <div><h2>{{ section.settings.heading | default: shop.name }}</h2><div class="rte">{{ section.settings.text }}</div></div>
+    {% for block in section.blocks %}
+      <div {{ block.shopify_attributes }}><h3>{{ block.settings.heading }}</h3><ul>{% for link in block.settings.menu.links %}<li><a href="{{ link.url }}">{{ link.title }}</a></li>{% endfor %}</ul></div>
+    {% endfor %}
+  </div>
+  <div class="page-width section--tight"><small>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. {{ powered_by_link }}</small></div>
+</footer>
+{% schema %}
+{"name":"Footer","settings":[{"type":"text","id":"heading","label":"Heading","default":"Made for curious homes"},{"type":"richtext","id":"text","label":"Text","default":"<p>Thoughtful objects, honest materials, and a little everyday joy.</p>"}],"blocks":[{"type":"menu","name":"Menu","settings":[{"type":"text","id":"heading","label":"Heading","default":"Explore"},{"type":"link_list","id":"menu","label":"Menu"}]}],"max_blocks":2,"enabled_on":{"groups":["footer"]}}
+{% endschema %}

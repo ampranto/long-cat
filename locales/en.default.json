@@ -1,0 +1,12 @@
+{
+  "accessibility": { "skip_to_text": "Skip to content", "close": "Close", "refresh_page": "Choosing a selection results in a full page refresh." },
+  "general": { "search": "Search", "menu": "Menu", "continue_shopping": "Continue shopping", "pagination": "Pagination", "previous": "Previous", "next": "Next" },
+  "products": { "product": { "add_to_cart": "Add to cart", "sold_out": "Sold out", "unavailable": "Unavailable", "quantity": "Quantity", "choose_options": "Choose options" } },
+  "cart": { "title": "Your cart", "empty": "Your cart is empty", "update": "Update cart", "checkout": "Check out", "subtotal": "Subtotal", "remove": "Remove", "discount": "Discount", "note": "Order note" },
+  "search": { "title": "Search", "placeholder": "Search products, articles and pages", "submit": "Search", "results_for": "Results for", "no_results": "No results found" },
+  "newsletter": { "label": "Email address", "button": "Join the list", "success": "Thanks for subscribing." },
+  "contact": { "name": "Name", "email": "Email", "phone": "Phone number", "message": "Message", "send": "Send", "success": "Thanks. We will get back to you soon." },
+  "blogs": { "article": { "read_more": "Read more", "back_to_blog": "Back to blog", "comments": "Comments", "post_comment": "Post comment" } },
+  "password": { "enter": "Enter using password", "password": "Password", "submit": "Enter", "admin_link_html": "Are you the store owner? <a href=\"/admin\">Log in here</a>" },
+  "gift_cards": { "issued": "Here's your gift card", "remaining": "Remaining", "shop_link": "Start shopping", "add_to_apple_wallet": "Add to Apple Wallet" }
+}
