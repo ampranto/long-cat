@@ -1,0 +1,30 @@
+@import "tailwindcss" source(none);
+
+@source "../layout";
+@source "../sections";
+@source "../snippets";
+@source "../templates";
+@source "./frameworks.js";
+
+@theme {
+  --color-theme-bg: var(--color-bg);
+  --color-theme-text: var(--color-text);
+  --color-theme-accent: var(--color-accent);
+  --color-theme-surface: var(--color-surface);
+  --font-theme-body: var(--font-body);
+  --font-theme-heading: var(--font-heading);
+  --radius-theme: var(--radius);
+}
+
+[x-cloak] { display: none !important; }
+
+.atelier-marquee__track { display: flex; width: max-content; animation: atelier-marquee var(--marquee-speed) linear infinite; }
+.atelier-marquee__set { display: flex; align-items: center; }
+.atelier-marquee--pause:hover .atelier-marquee__track { animation-play-state: paused; }
+
+@keyframes atelier-marquee { to { transform: translateX(-50%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .atelier-marquee__track { animation: none; }
+  .atelier-marquee__set[aria-hidden="true"] { display: none; }
+}

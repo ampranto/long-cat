@@ -1,1 +1,116 @@
-{"sections":{"hero":{"type":"hero","settings":{}},"featured":{"type":"featured-collection","settings":{}},"story":{"type":"image-with-text","settings":{}},"quotes":{"type":"testimonials","blocks":{"q1":{"type":"quote","settings":{}},"q2":{"type":"quote","settings":{"quote":"The kind of piece everyone asks about.","author":"Sample customer"}},"q3":{"type":"quote","settings":{"quote":"Fast, thoughtful, and full of charm.","author":"Sample customer"}}},"block_order":["q1","q2","q3"],"settings":{}},"newsletter":{"type":"newsletter","settings":{}}},"order":["hero","featured","story","quotes","newsletter"]}
+{
+  "sections": {
+    "hero": { "type": "hero", "settings": {} },
+    "marquee": {
+      "type": "marquee-strip",
+      "blocks": {
+        "m1": { "type": "message", "settings": { "text": "Designed for everyday delight", "divider": "✦" } },
+        "m2": { "type": "message", "settings": { "text": "Expressive objects", "divider": "✦" } },
+        "m3": { "type": "message", "settings": { "text": "Made with intention", "divider": "✦" } }
+      },
+      "block_order": ["m1", "m2", "m3"],
+      "settings": {}
+    },
+    "categories": {
+      "type": "category-showcase",
+      "blocks": {
+        "c1": { "type": "category", "settings": { "kicker": "Curated edit", "title": "The everyday edit" } },
+        "c2": { "type": "category", "settings": { "kicker": "Bold and bright", "title": "Color stories" } },
+        "c3": { "type": "category", "settings": { "kicker": "Less, but better", "title": "Quiet essentials" } }
+      },
+      "block_order": ["c1", "c2", "c3"],
+      "settings": {}
+    },
+    "featured": { "type": "featured-collection", "settings": {} },
+    "spotlight": { "type": "product-spotlight", "settings": {} },
+    "bento": {
+      "type": "bento-story",
+      "blocks": {
+        "b1": { "type": "tile", "settings": { "label": "Studio note", "heading": "Designed to be noticed", "size": "wide" } },
+        "b2": { "type": "tile", "settings": { "label": "Material study", "heading": "Texture matters", "size": "normal" } },
+        "b3": { "type": "tile", "settings": { "label": "At home", "heading": "Made for living", "size": "tall" } },
+        "b4": { "type": "tile", "settings": { "label": "Details", "heading": "A closer look", "size": "wide" } }
+      },
+      "block_order": ["b1", "b2", "b3", "b4"],
+      "settings": {}
+    },
+    "features": {
+      "type": "feature-rail",
+      "blocks": {
+        "f1": { "type": "feature", "settings": { "symbol": "✦", "heading": "Considered materials", "text": "Chosen for feel, function, and a longer useful life." } },
+        "f2": { "type": "feature", "settings": { "symbol": "↗", "heading": "Made to last", "text": "Useful forms with details that reward a closer look." } },
+        "f3": { "type": "feature", "settings": { "symbol": "◎", "heading": "Easy to live with", "text": "Designed around real rooms, routines, and people." } },
+        "f4": { "type": "feature", "settings": { "symbol": "◌", "heading": "Thoughtful delivery", "text": "Carefully prepared from the studio to your door." } }
+      },
+      "block_order": ["f1", "f2", "f3", "f4"],
+      "settings": {}
+    },
+    "collage": {
+      "type": "editorial-collage",
+      "blocks": {
+        "i1": { "type": "image", "settings": { "caption": "Form begins with a simple sketch" } },
+        "i2": { "type": "image", "settings": { "caption": "Color, tested in daylight" } },
+        "i3": { "type": "image", "settings": { "caption": "The final detail" } }
+      },
+      "block_order": ["i1", "i2", "i3"],
+      "settings": {}
+    },
+    "lookbook": {
+      "type": "shoppable-lookbook",
+      "blocks": {
+        "h1": { "type": "hotspot", "settings": { "title": "Featured object", "text": "Select a product to make this point shoppable.", "x": 30, "y": 42 } },
+        "h2": { "type": "hotspot", "settings": { "title": "A second favorite", "text": "Connect another product from the scene.", "x": 68, "y": 30 } },
+        "h3": { "type": "hotspot", "settings": { "title": "Finishing touch", "text": "Use the position sliders to place each marker.", "x": 75, "y": 72 } }
+      },
+      "block_order": ["h1", "h2", "h3"],
+      "settings": {}
+    },
+    "stats": {
+      "type": "stats-band",
+      "blocks": {
+        "s1": { "type": "stat", "settings": { "value": "24h", "heading": "Thoughtful dispatch", "text": "A concise supporting detail goes here." } },
+        "s2": { "type": "stat", "settings": { "value": "4.9/5", "heading": "Customer rating", "text": "Replace with a verified metric before publishing." } },
+        "s3": { "type": "stat", "settings": { "value": "12", "heading": "Signature finishes", "text": "Show the range customers can explore." } },
+        "s4": { "type": "stat", "settings": { "value": "100%", "heading": "Original point of view", "text": "Use a factual brand proof point here." } }
+      },
+      "block_order": ["s1", "s2", "s3", "s4"],
+      "settings": {}
+    },
+    "quotes": {
+      "type": "testimonials",
+      "blocks": {
+        "q1": { "type": "quote", "settings": {} },
+        "q2": { "type": "quote", "settings": { "quote": "The kind of piece everyone asks about.", "author": "Sample customer" } },
+        "q3": { "type": "quote", "settings": { "quote": "Fast, thoughtful, and full of charm.", "author": "Sample customer" } }
+      },
+      "block_order": ["q1", "q2", "q3"],
+      "settings": {}
+    },
+    "faq": {
+      "type": "faq-modern",
+      "blocks": {
+        "a1": { "type": "item", "settings": { "question": "What makes this collection different?", "answer": "<p>Use a short, direct answer that helps the customer make a confident decision.</p>" } },
+        "a2": { "type": "item", "settings": { "question": "How quickly will my order arrive?", "answer": "<p>Add your real dispatch and delivery policy here.</p>" } },
+        "a3": { "type": "item", "settings": { "question": "How should I care for it?", "answer": "<p>Share simple care instructions and material notes.</p>" } },
+        "a4": { "type": "item", "settings": { "question": "Can I send it as a gift?", "answer": "<p>Explain gift notes, wrapping, or receipt options here.</p>" } }
+      },
+      "block_order": ["a1", "a2", "a3", "a4"],
+      "settings": {}
+    },
+    "logos": {
+      "type": "logo-cloud",
+      "blocks": {
+        "l1": { "type": "logo", "settings": { "name": "Journal" } },
+        "l2": { "type": "logo", "settings": { "name": "Form" } },
+        "l3": { "type": "logo", "settings": { "name": "Habitat" } },
+        "l4": { "type": "logo", "settings": { "name": "Studio" } },
+        "l5": { "type": "logo", "settings": { "name": "Sunday" } },
+        "l6": { "type": "logo", "settings": { "name": "Object" } }
+      },
+      "block_order": ["l1", "l2", "l3", "l4", "l5", "l6"],
+      "settings": {}
+    },
+    "newsletter": { "type": "newsletter", "settings": {} }
+  },
+  "order": ["hero", "marquee", "categories", "featured", "spotlight", "bento", "features", "collage", "lookbook", "stats", "quotes", "faq", "logos", "newsletter"]
+}

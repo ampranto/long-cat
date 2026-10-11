@@ -1,4 +1,4 @@
-<section class="section"><div class="page-width"><p class="eyebrow">{{ section.settings.eyebrow }}</p><h2>{{ section.settings.heading }}</h2><div class="grid grid--products">
+<section class="section"><div class="page-width"><p class="eyebrow">{{ section.settings.eyebrow }}</p><h2>{{ section.settings.heading }}</h2><div class="grid grid--products" data-motion-group>
   {% if section.settings.collection != blank %}{% for product in section.settings.collection.products limit: section.settings.products_to_show %}{% render 'product-card', card_product: product %}{% endfor %}{% else %}{% for i in (1..4) %}<article class="card"><div class="card__media">{{ 'product-' | append: i | placeholder_svg_tag }}</div><div class="card__body"><h3>Sample product {{ i }}</h3><div class="price">{{ 2400 | money }}</div></div></article>{% endfor %}{% endif %}
 </div></div></section>
 {% schema %}

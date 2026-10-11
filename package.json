@@ -1,0 +1,30 @@
+{
+  "name": "longcat-atelier-theme",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build tooling for the Longcat Atelier Shopify theme",
+  "scripts": {
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "postcss ./src/tailwind.css -o ./assets/tailwind.css",
+    "build:js": "esbuild ./src/frameworks.js --bundle --format=iife --target=es2020 --outfile=./assets/frameworks.js",
+    "dev": "concurrently \"npm:dev:css\" \"npm:dev:js\"",
+    "dev:css": "postcss ./src/tailwind.css -o ./assets/tailwind.css --watch",
+    "dev:js": "esbuild ./src/frameworks.js --bundle --format=iife --target=es2020 --outfile=./assets/frameworks.js --watch",
+    "check": "shopify theme check"
+  },
+  "dependencies": {
+    "alpinejs": "^3.15.3",
+    "motion": "^12.23.24"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.1.14",
+    "concurrently": "^9.2.1",
+    "esbuild": "^0.25.10",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^12.0.0",
+    "tailwindcss": "4.1.14"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
